@@ -25,7 +25,12 @@ function tutorialReducer(tutorials = initialState, action){
                 }
             });
         case DELETE_TUTORIAL:
-            return
+            return tutorials.filter(({id}) => id !== payload.id);
+        case DELETE_ALL_TUTORIALS:
+            return [];
+        default:
+            return tutorials;
     }
-
 }
+
+export default tutorialReducer;
