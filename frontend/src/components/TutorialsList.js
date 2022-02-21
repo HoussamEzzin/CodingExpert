@@ -29,7 +29,7 @@ const TutorialsList = () => {
     };
 
     const setActiveTutorial = (tutorial, index) => {
-        setCurrentIndex(tutorial);
+        setCurrentIndex(index);
         setCurrentTutorial(tutorial);
     }
 
@@ -75,7 +75,7 @@ const TutorialsList = () => {
                     {tutorials && tutorials.map((tutorial,index) =>(
                         <li
                             className={
-                                "list-group-item"+(index ===currentIndex ? "active" :"")
+                                "list-group-item "+(index === currentIndex ? "active" :"")
                             }
                             onClick={() => setActiveTutorial(tutorial,index)}
                             key={index}
